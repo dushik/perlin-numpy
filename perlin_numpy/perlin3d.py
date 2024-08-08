@@ -107,7 +107,8 @@ def generate_fractal_noise_3d(
     for _ in range(octaves):
         noise += amplitude * generate_perlin_noise_3d(
             shape,
-            (frequency*res[0], frequency*res[1], frequency*res[2]),
+            # (frequency*res[0], frequency*res[1], frequency*res[2]),
+            (int(frequency * res[0]), int(frequency * res[1]), int(frequency * res[2])),
             tileable,
             interpolant
         )
